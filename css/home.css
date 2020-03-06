@@ -1,0 +1,106 @@
+/*CABEÇALHO*/
+
+#cabecalho {
+    background-color: #FBFBFB;
+    background-size: cover;
+    height: 100%;
+    align-items: center;
+}
+
+#cabecalho ul {
+    align-items: center;
+}
+
+#cabecalho ul li {
+    text-align: center;
+    width: 100%;
+}
+
+#cabecalho a {
+    color: #18ACC4;
+    font-size: 17px;
+}
+
+#logoQueroBolsa {
+    width: 40%;
+}
+
+/*tag nav geral*/
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    
+    width: 100%;
+}
+
+
+
+nav ul li a {
+    
+    text-decoration: none;
+}
+
+/*Menu*/
+
+#menu {
+    background-color: #18ACC4;
+    height: 10%;
+}
+
+#menu a {
+    color: #ffffff;
+    width: 100%;
+}
+#menu ul{
+    margin-left: 8.5%;
+    width: 30%;
+}
+
+#menu ul li{
+    width: 30%;
+}
+
+/*Bolsas favoritas*/
+
+#bolsa-favorita {
+    background-color: #FBFBFB;
+    width: 100%;
+}
+
+#menu-Bolsa ul{
+    margin-left: 7.0%;
+    width: 30%; 
+}
+
+#menu-Bolsa a {
+    color: #18ACC4;
+    font-size: 15px;
+    
+}
+#menu-Bolsa ul li {
+    margin-left: 5%;
+}
+
+#text-Bolsa{
+    margin-left: 8.5%;
+}
+
+h1{
+    font-weight: 600;
+}
+
+#semestre{
+    
+}

@@ -1,65 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/teste.css">
     <title>Quero Bolsa</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/media-querie.css">
 </head>
+
 <body>
-    <section id="info-user">
-        <p>Como funciona</p>
-        <p>|</p>
 
-        <i class="fab fa-whatsapp"></i>
-        <p>0800 123 2222</p>
-        <p>Envie mensagem ou ligue</p>
+    <header>
 
-        <img src="img/logo-querobolsa.svg">
-
-        <p>Nome Sobrenome</p>
-        <i class="far fa-user-circle"></i>
-    </section>
-
-    <section id="menu">
-        <nav>
+        <nav id="cabecalho">
             <ul>
+                <li><a href="#">Como funciona</a></li>
+                <li><a href="tel:08001232222"><i class="fab fa-whatsapp"></i> 0800 123 2222 Envie mensagem ou ligue</a>
+                </li>
+                <li><a><img id="logoQueroBolsa" src="img/logo-querobolsa.svg" alt="Logo Quero Bolsa"></a></li>
+                <li><a href="#">Nome Sobrenome <i class="far fa-user-circle"></i></a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <nav id="menu">
+        <ul>
+            <li><a href="#">Minha conta</a></li>
+            <li><a href="#">Pré-matrículas</a></li>
+            <li><a href="#">Bolsas favoritas</a></li>
+        </ul>
+    </nav>
+
+
+
+    <section id="bolsa-favorita">
+
+        <nav id="menu-Bolsa">
+            <ul>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">Minha conta</a></li>
-                <li><a href="#">Pré-matrículas</a></li>
                 <li><a href="#">Bolsas favoritas</a></li>
             </ul>
         </nav>
 
-    </section>
+        <div id="text-Bolsa">
+            <h1>Bolsas favoritas</h1>
+            <p>Adicione os cursos e faculdades de seu interesse e receba atualizações com as melhores ofertas.</p>
+        </div>
 
-    <section id="corpo">
-        <a>Home</a>
-        <a>/</a>
-        <a>Minha conta</a>
-        <a>/</a>
-        <a>Bolsas favoritas</a>
-
-
-        <h1>Bolsas favoritas</h1>
-        <p>Adicione bolsas de cursos e faculdades do seu interesse e receba atualizações com as melhores ofertas disponíveis.</p>
-
-        <button>Todos os semestres</button>
-        <button>2º semestre de 2019</button>
-        <button>1º semestre de 2020</button>
+        <div id="semestre">
+            <button>Todos os semestres</button>
+            <button>2º semestre de 2019</button>
+            <button>1º semestre de 2020</button>
+        </div>
 
 
-        <section id="addBolsa">
+        <div id="addBolsa">
             <a><i class="fas fa-plus-circle"></i></a>
             <h5>Adicionar bolsa</h5>
             <p>Clique para adicionar bolsas de cursos do seu interesse</p>
-        </section>
+        </div>
 
     </section>
 
-    <section id="contatos">
+    <section id="contato">
 
         <i class="fab fa-whatsapp"></i>
-        <p>0800 123 2222</p>
+        <p><a href="tel:08001232222">0800 123 2222</a></p>
         <p>Seg - Sec 8h-22h</p>
 
         <i class="far fa-comments"></i>
@@ -76,10 +87,11 @@
 
     </section>
 
-    <section id=rodape>
+    <footer id=rodape>
         <p>feito com <i class="far fa-heart"></i> pela Quero Educação</p>
-    </section>
+    </footer>
 
     <script src="https://kit.fontawesome.com/77b71911bb.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
