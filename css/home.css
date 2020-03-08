@@ -1,106 +1,300 @@
+/*GERAL*/
+
+body, ul, li, p, a {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
 /*CABEÇALHO*/
 
-#cabecalho {
+.cabecalho {
+    display: flex;
+    justify-content: center;
     background-color: #FBFBFB;
-    background-size: cover;
-    height: 100%;
+    min-height: 80px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    width: 1200px;
+    position: relative;
+    padding: 10px;
 }
 
-#cabecalho ul {
+.itemCabecalho {
     align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-self: stretch;
 }
 
-#cabecalho ul li {
-    text-align: center;
-    width: 100%;
-}
-
-#cabecalho a {
+.comoFunciona {
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
     color: #18ACC4;
-    font-size: 17px;
+    text-decoration: none;
 }
 
-#logoQueroBolsa {
+.hreto {
+    align-self: stretch;
+    border: 1px solid #e8eaee;
+    height: auto;
+    width: auto;
+    box-sizing: initial;
+    overflow: visible;
+    margin-right: 10px;
+}
+
+.cabecaConteudo {
+    align-self: center;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.whatsappHeader {
+    color: #0FA866;
+    height: 20px;
+    width: 20px;
+}
+
+.contatoWhats {
+    color: #18ACC4;
+    text-decoration: none;
+}
+.linkWhats{
+    align-items: center;
+    color: #0FA866;
+    display: flex;
+    padding: 8px;
+}
+
+.whatsNumberColor{
+    display: block;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.tellContato {
+    max-width: 120px;
+}
+
+.envieMsg {
+    color: #18ACC4;
+    font-size: 10px;
+}
+
+.logoQueroBolsa {
     width: 40%;
 }
 
-/*tag nav geral*/
+.itemLogin {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
 
-nav {
+.nomeUser {
+    text-decoration: none;
+    color: #18ACC4;
+    margin-right: 5px;
+}
+
+.userIcon {
+    color: #18ACC4;
+}
+
+/*Menu Navegação*/
+
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: #18ACC4;
+    height: 30px;
+}
+
+.containerMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    position: relative;
+    padding: '10px';
+}
+
+.itemMenu {
+    display: flex;
+    flex-direction: row;
+}
+
+.itemMenu li a {
+    color: #ffffff;
+    margin-right: 10px;
+    padding: 10px 10px 10px 0px;
+}
+
+/*corpo da página*/
+
+.corpoPagina {
+    display: flex;
+    justify-content: center;
+    background-color: #FBFBFB;
+    height: 700px;
+}
+
+.containerPagina {
     display: flex;
     flex-direction: column;
+    width: 1200px;
+    position: relative;
+    padding: '10px';
 }
 
-nav a {
-    text-decoration: none;
-    font-weight: 600;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
+.itemHome {
     display: flex;
-    
-    width: 100%;
+    flex-direction: row;
 }
 
-
-
-nav ul li a {
-    
-    text-decoration: none;
+.itemHome li {
+    padding: 10px 10px 10px 0px;
 }
 
-/*Menu*/
-
-#menu {
-    background-color: #18ACC4;
-    height: 10%;
-}
-
-#menu a {
-    color: #ffffff;
-    width: 100%;
-}
-#menu ul{
-    margin-left: 8.5%;
-    width: 30%;
-}
-
-#menu ul li{
-    width: 30%;
-}
-
-/*Bolsas favoritas*/
-
-#bolsa-favorita {
-    background-color: #FBFBFB;
-    width: 100%;
-}
-
-#menu-Bolsa ul{
-    margin-left: 7.0%;
-    width: 30%; 
-}
-
-#menu-Bolsa a {
+.itemHome li a {
     color: #18ACC4;
-    font-size: 15px;
+}
+
+.itemHome li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+.tituloBolsa {
+    padding: 0 0 25px 0px;
+}
+
+.botaoSemestre {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.botao{
+    background-color: #ffffff;
+    color: #18ACC4;
+    padding: 10px;
+    box-shadow: #000000;
+}
+
+/*CARD*/
+
+/* Float four columns side by side */
+
+.column {
+    float: left;
+    width: 20%;
+    padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+
+.row {
+    padding: 30px 0 10px 0;
+}
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the counter cards */
+
+.card {
+    
+    box-shadow:  1px 1px 0px 1px rgba(0, 0, 0, 0.2);
+    /* this adds the "card" effect */
+    padding: 100px 16px;
+    text-align: center;
+    background-color: #FBFBFB;
     
 }
-#menu-Bolsa ul li {
-    margin-left: 5%;
+
+.plus-circle{
+    width: 30%;
 }
 
-#text-Bolsa{
-    margin-left: 8.5%;
+
+/*CONTATO*/
+
+.contato{
+    background-color: #007A8D;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
 }
 
-h1{
-    font-weight: 600;
+.footerItems{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 1200px;
+    position: relative;
+    padding: 10px;
 }
 
-#semestre{
-    
+
+.linkContato{
+    align-items: center;
+    color: #ffffff;
+    display: flex;
+    padding: 8px;
+}
+
+.iconFooter{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: bottom;
+}
+
+.iconSvg{
+    max-width: 100%;
+    width: fit-content;
+}
+
+.textContato{
+    margin: 0 0 0 8px;
+}
+
+.colorTextContato{
+    display: block;
+    color: #ffffff;
+}
+
+
+.contatoItem{
+    display: flex;
+    flex-direction: row;
+}
+
+.msgRodape{
+    background-color: #18ACC4;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    padding: 35px;
 }

@@ -12,83 +12,172 @@
 
 <body>
 
-    <header>
+    <header class="cabecalho">
 
-        <nav id="cabecalho">
-            <ul>
-                <li><a href="#">Como funciona</a></li>
-                <li><a href="tel:08001232222"><i class="fab fa-whatsapp"></i> 0800 123 2222 Envie mensagem ou ligue</a>
-                </li>
-                <li><a><img id="logoQueroBolsa" src="img/logo-querobolsa.svg" alt="Logo Quero Bolsa"></a></li>
-                <li><a href="#">Nome Sobrenome <i class="far fa-user-circle"></i></a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="itemCabecalho">
+                <a href="#" class="comoFunciona">Como funciona</a>
+                <hr class="hreto">
+                <ul>
+                    <li>
+                        <a href="tel:08001232222" class="linkWhats">
+                            <div class="iconFooter">
+                                <i class="fab fa-whatsapp iconSvg"></i>
+                            </div>
+                            <p class="contatoWhats">
+                                <span class="whatsNumberColor">0800 123 2222</span>
+                                <span>Seg - Sec 8h-22h</span>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="itemCabecalho">
+
+                <a><img class="logoQueroBolsa" src="img/logo-querobolsa.svg" alt="Logo Quero Bolsa"></a>
+
+            </div>
+            <div class="itemCabecalho">
+                <div class="itemLogin">
+                    <a href="#" class="nomeUser">Nome Sobrenome</a>
+                    <span>
+                        <i class="far fa-user-circle userIcon"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
 
     </header>
 
-
-    <nav id="menu">
-        <ul>
-            <li><a href="#">Minha conta</a></li>
-            <li><a href="#">Pré-matrículas</a></li>
-            <li><a href="#">Bolsas favoritas</a></li>
-        </ul>
-    </nav>
-
-
-
-    <section id="bolsa-favorita">
-
-        <nav id="menu-Bolsa">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Minha conta</a></li>
-                <li><a href="#">Bolsas favoritas</a></li>
-            </ul>
-        </nav>
-
-        <div id="text-Bolsa">
-            <h1>Bolsas favoritas</h1>
-            <p>Adicione os cursos e faculdades de seu interesse e receba atualizações com as melhores ofertas.</p>
+    <div class="menu">
+        <div class="containerMenu">
+            <nav>
+                <ul class="itemMenu">
+                    <li><a href="#">Minha conta</a></li>
+                    <li><a href="#">Pré-matrículas</a></li>
+                    <li><a href="#">Bolsas favoritas</a></li>
+                </ul>
+            </nav>
         </div>
 
-        <div id="semestre">
-            <button>Todos os semestres</button>
-            <button>2º semestre de 2019</button>
-            <button>1º semestre de 2020</button>
+    </div>
+
+
+    <section class="corpoPagina">
+        <div class="containerPagina">
+
+            <div>
+                <ul class="itemHome">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Minha conta</a></li>
+                    <li><a href="#">Bolsas favoritas</a></li>
+                </ul>
+            </div>
+
+
+            <div class="tituloBolsa">
+                <h1>Bolsas favoritas</h1>
+                <p>Adicione os cursos e faculdades de seu interesse e receba atualizações com as melhores ofertas.</p>
+            </div>
+
+            <div class="botaoSemestre">
+                <button class="botao">Todos os semestres</button>
+                <button class="botao">2º semestre de 2019</button>
+                <button class="botao">1º semestre de 2020</button>
+            </div>
+
+
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                        <a><img class="plus-circle" src="img/icons/mais.svg" alt=""></a>
+                        <h4>Adicionar curso</h4>
+                        <p>Clique para adicionar bolsas de cursos do seu interesse</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <a><img class="plus-circle" src="img/icons/mais.svg" alt=""></a>
+                        <h5>Adicionar bolsa</h5>
+                        <p>Clique para adicionar bolsas de cursos do seu interesse</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <a><i class="fas fa-plus-circle"></i></a>
+                        <h5>Adicionar bolsa</h5>
+                        <p>Clique para adicionar bolsas de cursos do seu interesse</p>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
-
-
-        <div id="addBolsa">
-            <a><i class="fas fa-plus-circle"></i></a>
-            <h5>Adicionar bolsa</h5>
-            <p>Clique para adicionar bolsas de cursos do seu interesse</p>
-        </div>
-
-    </section>
-
-    <section id="contato">
-
-        <i class="fab fa-whatsapp"></i>
-        <p><a href="tel:08001232222">0800 123 2222</a></p>
-        <p>Seg - Sec 8h-22h</p>
-
-        <i class="far fa-comments"></i>
-        <p>Chat ao vivo</p>
-        <p>Seg - Sec 8h-22h</p>
-
-        <i class="far fa-envelope"></i>
-        <p>Mande um e-mail</p>
-        <p>Respondeos rapidinho</p>
-
-        <i class="fas fa-info-circle"></i>
-        <p>Central de ajuda</p>
-        <p>Encontre todas as respostas</p>
 
     </section>
 
     <footer id=rodape>
-        <p>feito com <i class="far fa-heart"></i> pela Quero Educação</p>
+        <div class="contato">
+
+            <ul class="footerItems">
+                <li>
+                    <a href="tel:08001232222" class="linkContato">
+                        <div class="iconFooter">
+                            <i class="fab fa-whatsapp iconSvg"></i>
+                        </div>
+                        <p class="textContato">
+                            <span class="colorTextContato">0800 123 2222</span>
+                            <span>Seg - Sec 8h-22h</span>
+                        </p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="linkContato">
+                        <div class="iconFooter">
+                            <i class="far fa-comments"></i>
+                        </div>
+                        <p class="textContato">
+                            <span class="colorTextContato">Chat ao vivo</span>
+                            <span>Seg - Sec 8h-22h</span>
+                        </p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="linkContato">
+                        <div class="iconFooter">
+                            <i class="far fa-envelope"></i>
+                        </div>
+                        <p class="textContato">
+                            <span class="colorTextContato">Mande um e-mail</span>
+                            <span>Respondeos rapidinho</span>
+                        </p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="linkContato">
+                        <div class="iconFooter">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <p class="textContato">
+                            <span class="colorTextContato">Central de ajuda</span>
+                            <span>Encontre todas as respostas</span>
+                        </p>
+                    </a>
+                </li>
+            </ul>
+
+
+
+        </div>
+
+        <div class="msgRodape">
+            <p>Feito com <i class="far fa-heart"></i> pela Quero Educação</p>
+        </div>
     </footer>
 
     <script src="https://kit.fontawesome.com/77b71911bb.js" crossorigin="anonymous"></script>
