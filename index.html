@@ -7,6 +7,7 @@
     <title>Quero Bolsa</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/media-querie.css">
 </head>
 
@@ -92,7 +93,7 @@
             <div class="row">
                 <div class="column">
                     <div class="card">
-                        <a><img class="plus-circle" src="img/icons/mais.svg" alt=""></a>
+                        <a><img class="plus-circle adiocionaBolsa" src="img/icons/mais.svg" alt=""></a>
                         <h4>Adicionar curso</h4>
                         <p>Clique para adicionar bolsas de cursos do seu interesse</p>
                     </div>
@@ -180,7 +181,64 @@
         </div>
     </footer>
 
+    <div id="modal-bolsa" class="modal-container">
+        <div class="modal">
+            <button class="fechar">X</button>
+            <h3>Adicionar bolsa</h3>
+            <p>Filtre e adicione as bolsas de seu interesse.</p>
+            <div>
+                <label for="cars">SELECIONE SUA CIDADE</label>
+                <select id="cars" name="carlist" form="carform">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="opel">Opel</option>
+                    <option value="audi">Audi</option>
+                </select>
+                <label for="cars">SELECIONE O CURSO DE SUA PREFERÊNCIA</label>
+                <select id="cars" name="carlist" form="carform">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="opel">Opel</option>
+                    <option value="audi">Audi</option>
+                </select>
+            </div>
+
+            <div>
+                <div>
+                    <p>COMO VOCÊ QUER ESTUDAR?</p>
+                    <div>
+                        <input type="checkbox" id="presencial" name="presencial" checked>
+                        <label for="presencial">Presencial</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="distancia" name="distancia" checked>
+                        <label for="distancia">A distância</label>
+                    </div>
+                </div>
+                <div>
+                    <p>ATÉ QUANTO PODE PAGAR?</p>
+                    <p>R$:10.000</p>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+
+                </div>
+            </div>
+
+            <div>
+                <p>Resultado:</p>
+                <p>Ordenar por Nome da Faculdade</p>
+                <div>
+                    
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
     <script src="https://kit.fontawesome.com/77b71911bb.js" crossorigin="anonymous"></script>
+    <script src="js/modal.js"></script>
 </body>
 
 </html>
