@@ -181,42 +181,56 @@
         </div>
     </footer>
 
+    
     <div id="modal-bolsa" class="modal-container">
+        
         <div class="modal">
             <button class="fechar">X</button>
-            <h3>Adicionar bolsa</h3>
-            <p>Filtre e adicione as bolsas de seu interesse.</p>
+
             <div>
-                <label for="cars">SELECIONE SUA CIDADE</label>
-                <select id="cars" name="carlist" form="carform">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="opel">Opel</option>
-                    <option value="audi">Audi</option>
-                </select>
-                <label for="cars">SELECIONE O CURSO DE SUA PREFERÊNCIA</label>
-                <select id="cars" name="carlist" form="carform">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="opel">Opel</option>
-                    <option value="audi">Audi</option>
-                </select>
+                <h3>Adicionar bolsa</h3>
+                <p>Filtre e adicione as bolsas de seu interesse.</p>
+            </div>
+
+            <div class="selecione">
+
+                <div class="seleCidade">
+                    <label for="cars">SELECIONE SUA CIDADE</label>
+                    <select id="cars" name="carlist" form="carform" class="select">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+
+                <div class="seleCurso">
+                    <label for="cars">SELECIONE O CURSO DE SUA PREFERÊNCIA</label>
+                    <select id="cars" name="carlist" form="carform" class="select">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+
             </div>
 
             <div>
                 <div>
                     <p>COMO VOCÊ QUER ESTUDAR?</p>
-                    <div>
+                    <div class="presencialOuDistancia">
                         <input type="checkbox" id="presencial" name="presencial" checked>
                         <label for="presencial">Presencial</label>
-                    </div>
+                    
 
-                    <div>
+                    
                         <input type="checkbox" id="distancia" name="distancia" checked>
                         <label for="distancia">A distância</label>
                     </div>
                 </div>
-                <div>
+
+                <div class="quantoPagar">
                     <p>ATÉ QUANTO PODE PAGAR?</p>
                     <p>R$:10.000</p>
                     <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
@@ -225,14 +239,17 @@
             </div>
 
             <div>
-                <p>Resultado:</p>
-                <p>Ordenar por Nome da Faculdade</p>
-                <div>
+                <div class="resultadoOrdena">
+                    <p>Resultado:</p>
+                    <p>Ordenar por Nome da Faculdade</p>
+                </div>
+                
+                <div class="tabelaCurso">
                     <table>
                         <tbody>
                             <tr>
                                 <td><input type="checkbox"></td>
-                                <td><img src="img/anhanguera.png"></td>
+                                <td><img class="tamanhoTeste" src="img/anhanguera.png"></td>
                                 <td>
                                     <span>Administração</span>
                                     <span>Bacharelado</span>
@@ -244,7 +261,7 @@
                             </tr>
                             <tr>
                                 <td><input type="checkbox"></td>
-                                <td><img src="img/anhanguera.png"></td>
+                                <td><img class="tamanhoTeste" src="img/anhanguera.png"></td>
                                 <td>
                                     <span>Administração</span>
                                     <span>Bacharelado</span>
@@ -254,11 +271,18 @@
                                     <span>R$ 374/mês</span>
                                 </td>
                             </tr>
+                            
+                            
+                            
                         </tbody>
                     </table>
                 </div>
             </div>
 
+            <div class="buttonModal">
+                <button>Cancelar</button>
+                <button>Adicionar Bolsa(s)</button>
+            </div>
 
 
         </div>
