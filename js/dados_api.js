@@ -1,7 +1,9 @@
-
+var data = "";
   
-  
-
+  function response(teste){
+    data = teste;
+  }
+ 
 
   function lerArquivo(nome, callback)
   {
@@ -21,8 +23,8 @@
       req.send(null);
   }
 
-    
-  var objects = JSON.parse(JSON.stringify(lerArquivo("./js/db.json")));
+  lerArquivo("./js/db.json",response);
+  var objects = JSON.parse(JSON.stringify(data));
   
   objects.forEach(function(key){
       console.log(key.campus.city);
