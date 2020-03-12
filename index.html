@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/media-querie.css">
+    
 </head>
 
 <body>
@@ -196,6 +197,7 @@
 
                 <div class="seleCidade">
                     <label for="cars">SELECIONE SUA CIDADE</label>
+                
                     <select id="cars" name="carlist" form="carform" class="select">
                         <option value="volvo">Volvo</option>
                         <option value="saab">Saab</option>
@@ -216,7 +218,7 @@
 
             </div>
 
-            <div>
+            <div class="estudarPagar">
                 <div>
                     <p>COMO VOCÊ QUER ESTUDAR?</p>
                     <div class="presencialOuDistancia">
@@ -251,7 +253,7 @@
                                 <td><input type="checkbox"></td>
                                 <td><img class="tamanhoTeste" src="img/anhanguera.png"></td>
                                 <td>
-                                    <span>Administração</span>
+                                    <span id="nomeCurso"></span>
                                     <span>Bacharelado</span>
                                 </td>
                                 <td>
@@ -283,13 +285,15 @@
                 <button>Cancelar</button>
                 <button>Adicionar Bolsa(s)</button>
             </div>
-
+           
 
         </div>
     </div>
 
     <script src="https://kit.fontawesome.com/77b71911bb.js" crossorigin="anonymous"></script>
     <script src="js/modal.js"></script>
+    <script type="text/javascript" src="js/db.json"></script>
+    <script type="text/javascript" src="js/dados_api.js"></script>
 </body>
 
 </html>

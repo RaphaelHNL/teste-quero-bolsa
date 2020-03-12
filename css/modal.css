@@ -17,7 +17,8 @@
 }
 
 .modal-container label{
-    font-size: 10px;
+    font-size: 8px;
+    font-weight: 700;
 }
 
 
@@ -27,9 +28,9 @@
 
 .modal{
     background: white;
-    width: 40%;
+    width: 27%;
     min-width: 300px;
-    padding: 0 30px 20px 30px;
+    padding: 0 15px 20px 15px;
     border: 10px;
     box-shadow: 0 0 0 10px white;
     position: relative;
@@ -67,12 +68,12 @@
 }
 
 
-.selecione{
+.estudarPagar , .resultadoOrdena, .selecione{
+    padding-top: 10px;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    justify-content: space-between;
     flex-direction: row;
-    justify-content: end;
+    flex-wrap: wrap;
 }
 
 .seleCidade{
@@ -83,10 +84,28 @@
     width: 50%;
 }
 
+
 .select{
-    width: 80%;
+    width: 90%;
 }
 
 .tamanhoTeste{
     width: 50%;
 }
+
+.buttonModal{
+    padding-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    
+}
+table{
+    border-collapse: collapse;
+}
+td{
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+   
+}
+

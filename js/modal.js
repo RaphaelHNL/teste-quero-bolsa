@@ -18,3 +18,6 @@ addBolsa.addEventListener('click', () => iniciaModal('modal-bolsa'))
 
 
 
+
+
+
