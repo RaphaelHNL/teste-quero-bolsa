@@ -1,6 +1,6 @@
 
   
-  var nome = ""
+  
 
 
   function lerArquivo(nome, callback)
