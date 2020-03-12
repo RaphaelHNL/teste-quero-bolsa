@@ -26,7 +26,5 @@ var data = "";
   lerArquivo("./js/db.json",response);
   var objects = JSON.parse(JSON.stringify(data));
   
-  objects.forEach(function(key){
-      console.log(key.campus.city);
-     
-  })
+  
+console.log(objects);
