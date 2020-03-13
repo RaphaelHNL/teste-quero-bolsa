@@ -1,5 +1,3 @@
-fetch("./js/db.json", { method: "get" })
-        .then(response => response.json())
-        .then(data => { return Object.keys(res = data.course).map(k => console.log(k)) }
-
-        )
+/*fetch('./js/dados/db.json', { method: "get" })
+    .then(response => response.json())
+    .then(data => console.log(data[0]));*/

@@ -70,6 +70,7 @@ a {
 .contatoWhats {
     color: #18ACC4;
     text-decoration: none;
+    margin: 0 0 0 8px;
 }
 .linkWhats{
     align-items: center;
@@ -80,6 +81,7 @@ a {
 
 .whatsNumberColor{
     display: block;
+    margin-bottom: 4px;
 }
 
 .wrap {
@@ -114,6 +116,10 @@ a {
 .userIcon {
     color: #18ACC4;
 }
+
+.iconSvg{
+    font-size: 20px;
+ }
 
 /*Menu Navegação*/
 
@@ -269,12 +275,15 @@ a {
     align-items: center;
     justify-content: center;
     vertical-align: bottom;
+    font-size: 35px;
+   
 }
 
-.iconSvg{
-    max-width: 100%;
-    width: fit-content;
+.infoIcon{
+    width: 35px;
 }
+
+
 
 .textContato{
     margin: 0 0 0 8px;
