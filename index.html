@@ -9,16 +9,19 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/media-querie.css">
-    
+
 </head>
 
 <body>
 
-    <header class="cabecalho">
+    <header>
 
         <div class="container">
             <div class="itemCabecalho">
-                <a href="#" class="comoFunciona">Como funciona</a>
+                <div class="informacao">
+                    <img src="img/icons/info-header.svg" class="infoCircle">
+                    <a href="#" class="comoFunciona">Como funciona</a>
+                </div>
                 <hr class="hreto">
                 <ul>
                     <li>
@@ -28,7 +31,7 @@
                             </div>
                             <p class="contatoWhats">
                                 <span class="whatsNumberColor">0800 123 2222</span>
-                                <span>Envie mensagem ou ligue</span>
+                                <span class="msgLigue">Envie mensagem ou ligue</span>
                             </p>
                         </a>
                     </li>
@@ -59,7 +62,7 @@
                 <ul class="itemMenu">
                     <li><a href="#">Minha conta</a></li>
                     <li><a href="#">Pré-matrículas</a></li>
-                    <li><a href="#">Bolsas favoritas</a></li>
+                    <li><a href="#" class="bolsaMenu">Bolsas favoritas</a></li>
                 </ul>
             </nav>
         </div>
@@ -72,22 +75,23 @@
 
             <div>
                 <ul class="itemHome">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Minha conta</a></li>
-                    <li><a href="#">Bolsas favoritas</a></li>
+                    <li><a href="#" class="homeConta">Home</a></li>
+                    <li><a href="#" class="homeConta">Minha conta</a></li>
+                    <li><a href="#" class="bolsaColor">Bolsas favoritas</a></li>
                 </ul>
             </div>
 
 
             <div class="tituloBolsa">
                 <h1>Bolsas favoritas</h1>
-                <p>Adicione os cursos e faculdades de seu interesse e receba atualizações com as melhores ofertas.</p>
+                <p>Adicione bolsas de cursos e faculdades do seu interesse e receba atualizações com as melhores ofertas
+                    disponíveis.</p>
             </div>
 
             <div class="botaoSemestre">
-                <button class="botao">Todos os semestres</button>
+                <button class="botao btnRadius">Todos os semestres</button>
                 <button class="botao">2º semestre de 2019</button>
-                <button class="botao">1º semestre de 2020</button>
+                <button class="botao btnFirstSemestre">1º semestre de 2020</button>
             </div>
 
 
@@ -182,9 +186,9 @@
         </div>
     </footer>
 
-    
+
     <div id="modal-bolsa" class="modal-container">
-        
+
         <div class="modal">
             <button class="fechar">X</button>
 
@@ -197,7 +201,7 @@
 
                 <div class="seleCidade">
                     <label for="cars">SELECIONE SUA CIDADE</label>
-                
+
                     <select id="cars" name="carlist" form="carform" class="select">
                         <option value="volvo">Volvo</option>
                         <option value="saab">Saab</option>
@@ -224,9 +228,9 @@
                     <div class="presencialOuDistancia">
                         <input type="checkbox" id="presencial" name="presencial" checked>
                         <label for="presencial">Presencial</label>
-                    
 
-                    
+
+
                         <input type="checkbox" id="distancia" name="distancia" checked>
                         <label for="distancia">A distância</label>
                     </div>
@@ -245,7 +249,7 @@
                     <p>Resultado:</p>
                     <p>Ordenar por Nome da Faculdade</p>
                 </div>
-                
+
                 <div class="tabelaCurso">
                     <table>
                         <tbody>
@@ -273,9 +277,9 @@
                                     <span>R$ 374/mês</span>
                                 </td>
                             </tr>
-                            
-                            
-                            
+
+
+
                         </tbody>
                     </table>
                 </div>
@@ -285,7 +289,7 @@
                 <button>Cancelar</button>
                 <button>Adicionar Bolsa(s)</button>
             </div>
-           
+
 
         </div>
     </div>

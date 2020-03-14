@@ -4,7 +4,8 @@ body, ul, li, p, a {
     margin: 0px;
     padding: 0px;
     list-style: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'proxima-nova', Arial, sans-serif, Helvetica;
+   
 }
 
 a {
@@ -13,11 +14,15 @@ a {
 
 /*CABEÇALHO*/
 
-.cabecalho {
+header {
     display: flex;
     justify-content: center;
     background-color: #FBFBFB;
-    min-height: 80px;
+    height: 80px;
+    margin-bottom: 0.5px;
+    -webkit-box-shadow: 0px -2px 183px 10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -2px 183px 10px rgba(0,0,0,0.75);
+    box-shadow: 0px -2px 183px 10px rgba(0,0,0,0.75);
 }
 
 .container {
@@ -27,6 +32,7 @@ a {
     width: 1200px;
     position: relative;
     padding: 10px;
+    font-weight: 700;
 }
 
 .itemCabecalho {
@@ -34,6 +40,18 @@ a {
     display: flex;
     flex-direction: row;
     align-self: stretch;
+}
+
+.informacao{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.infoCircle{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
 }
 
 .comoFunciona {
@@ -54,6 +72,8 @@ a {
     margin-right: 10px;
 }
 
+
+
 .cabecaConteudo {
     align-self: center;
     position: relative;
@@ -72,14 +92,15 @@ a {
     text-decoration: none;
     margin: 0 0 0 8px;
 }
-.linkWhats{
+
+.linkWhats {
     align-items: center;
     color: #0FA866;
     display: flex;
     padding: 8px;
 }
 
-.whatsNumberColor{
+.whatsNumberColor {
     display: block;
     margin-bottom: 4px;
 }
@@ -117,9 +138,13 @@ a {
     color: #18ACC4;
 }
 
-.iconSvg{
+.iconSvg {
     font-size: 20px;
- }
+}
+
+.msgLigue {
+    font-size: 13px;
+}
 
 /*Menu Navegação*/
 
@@ -127,7 +152,7 @@ a {
     display: flex;
     justify-content: center;
     background-color: #18ACC4;
-    height: 30px;
+    height: 40px;
 }
 
 .containerMenu {
@@ -146,11 +171,17 @@ a {
 
 .itemMenu li a {
     color: #ffffff;
-    margin-right: 10px;
-    padding: 10px 10px 10px 0px;
+    
+    padding: 11px 12px 11px 12px;
+    font-weight: 700;
+}
+
+.bolsaMenu{
+    background-color: #007A8D;
 }
 
 /*corpo da página*/
+
 
 .corpoPagina {
     display: flex;
@@ -170,24 +201,34 @@ a {
 .itemHome {
     display: flex;
     flex-direction: row;
+    margin-top: 15px;
 }
 
 .itemHome li {
     padding: 10px 10px 10px 0px;
 }
 
-.itemHome li a {
+.homeConta {
     color: #18ACC4;
+    font-size: 13px;
+    font-weight: 550;
+}
+
+.bolsaColor{
+    color: #1F2D30;
+    font-size: 13px;
+    font-weight: 550;
 }
 
 .itemHome li+li:before {
-    padding: 8px;
+    padding: 2px;
     color: black;
     content: "/\00a0";
 }
 
 .tituloBolsa {
     padding: 0 0 25px 0px;
+    color: #1F2D30;
 }
 
 .botaoSemestre {
@@ -195,11 +236,33 @@ a {
     justify-content: flex-end;
 }
 
-.botao{
-    background-color: #ffffff;
-    color: #18ACC4;
-    padding: 10px;
-    box-shadow: #000000;
+.botao {
+    background-color: white; 
+    border: 1px solid #007A8D;
+    color: #007A8D;
+    padding: 15px 32px;
+   
+   
+    
+    font-size: 16px;
+    font-weight: 700;
+    
+}
+
+
+
+.botao:focus{
+    background: #007A8D;
+    color: white;
+    border: 1px solid #007A8D;
+}
+
+.btnRadius{
+    border-radius: 5px 0 0 5px;
+}
+
+.btnFirstSemestre{
+    border-radius: 0 5px 5px 0; 
 }
 
 /*CARD*/
@@ -229,30 +292,28 @@ a {
 /* Style the counter cards */
 
 .card {
-    
-    box-shadow:  1px 1px 0px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 0.2);
     /* this adds the "card" effect */
     padding: 100px 16px;
     text-align: center;
     background-color: #FBFBFB;
-    
+    color:#1F2D30;
 }
 
-.plus-circle{
+.plus-circle {
     width: 30%;
 }
 
-
 /*CONTATO*/
 
-.contato{
+.contato {
     background-color: #007A8D;
     display: flex;
     justify-content: center;
     padding: 15px;
 }
 
-.footerItems{
+.footerItems {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -260,50 +321,47 @@ a {
     width: 1200px;
     position: relative;
     padding: 10px;
+    font-weight: 550;
 }
 
-
-.linkContato{
+.linkContato {
     align-items: center;
     color: #ffffff;
     display: flex;
     padding: 8px;
 }
 
-.iconFooter{
+.iconFooter {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     vertical-align: bottom;
     font-size: 35px;
-   
 }
 
-.infoIcon{
+.infoIcon {
     width: 35px;
 }
 
-
-
-.textContato{
+.textContato {
     margin: 0 0 0 8px;
 }
 
-.colorTextContato{
+.colorTextContato {
     display: block;
     color: #ffffff;
 }
 
-
-.contatoItem{
+.contatoItem {
     display: flex;
     flex-direction: row;
 }
 
-.msgRodape{
+.msgRodape {
     background-color: #18ACC4;
     display: flex;
+    
     justify-content: center;
     color: #ffffff;
-    padding: 35px;
+    padding: 50px;
 }
