@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quero Bolsa</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/css_homePage/header.css">
+    <link rel="stylesheet" href="css/css_homePage/menuNavegacao.css">
+    <link rel="stylesheet" href="css/css_homePage/corpoPagina.css">
+    <link rel="stylesheet" href="css/css_homePage/cardBolsa.css">
+    <link rel="stylesheet" href="css/css_homePage/footer.css">
+    <link rel="stylesheet" href="css/css_Modal/modal.css">
+    <link rel="stylesheet" href="css/css_Modal/range.css">
     <link rel="stylesheet" href="css/media-querie.css">
 
 </head>
@@ -26,7 +31,7 @@
                 <ul>
                     <li>
                         <a href="tel:08001232222" class="linkWhats">
-                            <div class="iconFooter">
+                            <div class="whatsappHeader">
                                 <i class="fab fa-whatsapp iconSvg"></i>
                             </div>
                             <p class="contatoWhats">
@@ -89,18 +94,26 @@
             </div>
 
             <div class="botaoSemestre">
-                <button id="allSemestre" class="botao btnRadius" onclick="chooseSemestre('allSemestre')">Todos os semestres</button>
-                <button id="secondSemestre" class="botao" onclick="chooseSemestre('secondSemestre')">2º semestre de 2019</button>
-                <button id="firstSemestre" class="botao btnFirstSemestre" onclick="chooseSemestre('firstSemestre')">1º semestre de 2020</button>
+                <button id="allSemestre" class="botao btnRadius" onclick="chooseSemestre('allSemestre')">Todos os
+                    semestres</button>
+                <button id="secondSemestre" class="botao" onclick="chooseSemestre('secondSemestre')">2º semestre de
+                    2019</button>
+                <button id="firstSemestre" class="botao btnFirstSemestre" onclick="chooseSemestre('firstSemestre')">1º
+                    semestre de 2020</button>
             </div>
 
 
-            <section id="sectionCards" class="flex">
+            <section id="sectionCards" class="flex grid">
                 <div class="card">
                     <div class="itemsCard">
-                        <img class="imgAddBolsa btnOpenModal" src="img/icons/mais.svg" alt="">
-                        <h4>Adicionar bolsa</h4>
-                        <p>Clique para adicionar bolsas de cursos do seu interesse</p>
+                        <div class="containerImg">
+                            <img class="imgAddBolsa btnOpenModal" src="img/icons/mais.svg" alt="">
+                        </div>
+                        <div class="containerAddBolsa">
+                            <strong>Adicionar bolsa</strong>
+                            <p>Clique para adicionar bolsas de</p>
+                            <p>cursos do seu interesse</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -113,7 +126,7 @@
         <div class="contato">
 
             <ul class="footerItems">
-                <li>
+                <li class="gridWhats">
                     <a href="tel:08001232222" class="linkContato">
                         <div class="iconFooter">
                             <i class="fab fa-whatsapp"></i>
@@ -171,30 +184,31 @@
         </div>
     </footer>
 
-
+<!--MODAL-->
     <div id="modal-bolsa" class="modal-container">
-
+        
         <div class="modal">
-            <button class="fechar">X</button>
+            <a class="fechar">X</a> 
 
             <div>
-                <h3>Adicionar bolsa</h3>
-                <p>Filtre e adicione as bolsas de seu interesse.</p>
+                <h2>Adicionar bolsa</h2>
+                <p class="filtreAdd">Filtre e adicione as bolsas de seu interesse.</p>
             </div>
 
             <div class="selecione">
 
                 <div class="seleCidade">
-                    <label for="cars">SELECIONE SUA CIDADE</label>
+                    <label class="labelModal" for="cities">SELECIONE SUA CIDADE</label>
 
-                    <select id="cities" name="citiesList" form="citiesForm" class="select" onchange="insertRowsTable()">
+                    <select id="cities" name="citiesList" form="citiesForm" class="selectCity" onchange="insertRowsTable()">
                         <option value="" selected>Selecione uma cidade</option>
                     </select>
                 </div>
 
                 <div class="seleCurso">
-                    <label for="cars">SELECIONE O CURSO DE SUA PREFERÊNCIA</label>
-                    <select id="courses" name="coursesList" form="coursesForm" class="select" onchange="insertRowsTable()">
+                    <label class="labelModal" for="courses">SELECIONE O CURSO DE SUA PREFERÊNCIA</label>
+                    <select id="courses" name="coursesList" form="coursesForm" class="selectCourse"
+                        onchange="insertRowsTable()">
                         <option value="" selected>Selecione um curso</option>
                     </select>
                 </div>
@@ -202,19 +216,19 @@
             </div>
 
             <div class="estudarPagar">
-                <div>
-                    <p>COMO VOCÊ QUER ESTUDAR?</p>
+                <div class="eadPresencial">
+                    <p class="comoQuerEstudar">COMO VOCÊ QUER ESTUDAR?</p>
                     <div class="presencialOuDistancia">
-                        <input type="checkbox" id="presencial" name="presencial" checked oninput="insertRowsTable()">
-                        <label for="presencial">Presencial</label>
-
-                        <input type="checkbox" id="distancia" name="distancia" checked onchange="insertRowsTable()">
-                        <label for="distancia">A distância</label>
+                        <input class="checkbox" type="checkbox" id="presencial" name="presencial" checked oninput="insertRowsTable()">
+                        <label for="presencial" class="presencialCheck">Presencial</label>
+                        
+                        <input class="checkbox" type="checkbox" id="distancia" name="distancia" checked onchange="insertRowsTable()">
+                        <label for="distancia" class="eadCheck">A distância</label>
                     </div>
                 </div>
 
                 <div class="quantoPagar">
-                    <p>ATÉ QUANTO PODE PAGAR?</p>
+                    <p class="ateQtPagar">ATÉ QUANTO PODE PAGAR?</p>
                     <p id="valBox"></p>
                     <input value="10000" type="range" min="100" max="10000" step="100" oninput="showVal(this.value)"
                         onchange="insertRowsTable()">
@@ -252,8 +266,8 @@
             </div>
 
             <div class="buttonModal">
-                <button onclick="limpaFiltro()">Cancelar</button>
-                <button id="btnAddBolsa" onclick="adicionaBolsa()">Adicionar Bolsa(s)</button>
+                <button class="btnCancelar" onclick="limpaFiltro()">Cancelar</button>
+                <button class="addBolsasBtn" id="btnAddBolsa" onclick="adicionaBolsa()">Adicionar Bolsa(s)</button>
             </div>
 
 

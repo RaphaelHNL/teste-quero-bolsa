@@ -1,0 +1,53 @@
+
+@media only screen 
+  and (min-device-width: 320px)
+  and (max-device-width: 720px) {
+
+    /*HEADER QUERIE*/
+    .container{
+        width: 100% !important;
+    }
+
+    .linkWhats {
+        font-size: 5% !important;
+        width: 100% !important;
+    }
+
+    /*Menu*/
+    .containerMenu{
+        width: 100% !important;
+    }
+   
+    .itemMenu li a{
+        font-size: 13px !important;
+    }
+
+    /*Corpo Página*/
+    .containerPagina{
+        width: 100% !important;
+    }
+
+    .tituloBolsa {
+        font-size: 13px !important;
+    }
+
+    /*button*/
+    .botaoSemestre{
+        flex-direction: column !important;
+    }
+
+    /*CARDS*/
+    .flex{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+    }
+
+    /*Footer*/
+    .gridWhats{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: auto;
+        grid-gap: 1rem;
+        margin: 40px 0 300px 0;
+    }
+
+}

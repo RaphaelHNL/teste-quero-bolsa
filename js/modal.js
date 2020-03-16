@@ -46,7 +46,7 @@ document.getElementById("valBox").innerHTML = `R$${(10000).toLocaleString('pt-BR
 function showVal(newVal) {
     valuePay = newVal;
     document.getElementById("valBox").innerHTML = `R$${parseInt(newVal).toLocaleString('pt-BR')}`;
-    
+
 
 }
 
@@ -66,7 +66,7 @@ function insertRowsTable() {
 
     for (let index = 0; index < rows.length; index++) {
         const element = rows[index];
-       
+
 
         if (
             element.price_with_discount <= valuePay
@@ -89,6 +89,8 @@ function insertRowsTable() {
             checkBox.value = index;
             checkBox.onclick = enableDisableButton;
             checkBox.name = 'checkboxBolsa'
+            checkBox.className = 'checkbox'
+
 
             var img = document.createElement('img');
             img.src = element.university.logo_url;
@@ -171,6 +173,12 @@ function cards() {
     divCard.className = 'card';
     var divItems = document.createElement('div');
     divItems.className = 'itemsCard';
+    var containerImg = document.createElement('div');
+    containerImg.className = 'containerImg';
+    var containerAddBolsa = document.createElement('div');
+    containerAddBolsa.className = 'containerAddBolsa';
+
+
     var imgPlus = document.createElement('img');
     imgPlus.src = 'img/icons/mais.svg';
     imgPlus.className = 'imgAddBolsa'
@@ -178,17 +186,23 @@ function cards() {
 
 
 
-    var titleAddBolsa = document.createElement('h4');
+    var titleAddBolsa = document.createElement('strong');
     titleAddBolsa.innerHTML = 'Adicionar bolsa';
 
     var textAddBolsa = document.createElement('p');
-    textAddBolsa.innerHTML = 'Clique para adicionar bolsas de cursos do seu interesse';
+    textAddBolsa.innerHTML = 'Clique para adicionar bolsas de';
+
+    var textAddBolsaTwo = document.createElement('p');
+    textAddBolsaTwo.innerHTML = 'cursos do seu interesse';
 
     sectionCard.appendChild(divCard);
     divCard.appendChild(divItems);
-    divItems.appendChild(imgPlus);
-    divItems.appendChild(titleAddBolsa);
-    divItems.appendChild(textAddBolsa);
+    divItems.appendChild(containerImg);
+    divItems.appendChild(containerAddBolsa);
+    containerImg.appendChild(imgPlus);
+    containerAddBolsa.appendChild(titleAddBolsa);
+    containerAddBolsa.appendChild(textAddBolsa);
+    containerAddBolsa.appendChild(textAddBolsaTwo);
 
 
 
@@ -200,16 +214,38 @@ function cards() {
 
 
 
+            const rating = element.university.score;
+
+            // total number of stars
+            const starTotal = 5;
+
+            const starPercentage = (rating / starTotal) * 100;
+            const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
+            
+
             var divCard = document.createElement('div');
             divCard.className = 'card';
             var divItems = document.createElement('div');
             divItems.className = 'itemsCard';
 
+            var containerLogoFacul = document.createElement('div');
+            containerLogoFacul.className = 'containerLogoFacul';
+            var containerNameCourse = document.createElement('div');
+            containerNameCourse.className = 'containerNameCourse';
+            var hrcontainer = document.createElement('div');
+            hrcontainer.className = 'containerhr';
+            var containerTipo = document.createElement('div');
+            containerTipo.className = 'containerTipo';
+            var mensalidadePrice = document.createElement('div');
+            mensalidadePrice.className = 'containerMensalidade';
+
+
+
             var imgCard = document.createElement('img');
-            imgCard.className = 'imgAddBolsa';
+            imgCard.className = 'logoFacul';
             imgCard.src = element.university.logo_url;
 
-            var nameFacul = document.createElement('p');
+            var nameFacul = document.createElement('strong');
             nameFacul.className = 'nomeFacul';
             nameFacul.innerHTML = element.university.name;
 
@@ -227,6 +263,7 @@ function cards() {
             starOuter.className = 'stars-outer';
             var starInner = document.createElement('div');
             starInner.className = 'stars-inner';
+            starInner.style.width = starPercentageRounded;
             starOuter.appendChild(starInner);
 
             var horizontal = document.createElement('hr');
@@ -235,15 +272,15 @@ function cards() {
             var horizontalTwo = document.createElement('hr');
             horizontalTwo.className = 'hdeitado';
 
-            var presencialEad = document.createElement('p');
-            presencialEad.className = 'nomeFacul';
+            var presencialEad = document.createElement('strong');
+            presencialEad.className = 'presencialEad';
             presencialEad.innerHTML = `${element.course.kind == 'Presencial' ? element.course.kind : 'ENSINO A DISTÂNCIA'} - ${element.course.shift}`
 
             var inicioAula = document.createElement('p');
             inicioAula.className = 'inicioAula';
             inicioAula.innerHTML = `Início das aulas em: ${element.start_date}`;
 
-            var mensalidade = document.createElement('p');
+            var mensalidade = document.createElement('strong');
             mensalidade.className = 'mensalidadeCurso';
             mensalidade.innerHTML = `${element.enabled ? 'Mensalidade com o Quero Bolsa:' : 'Bolsa indisponível.'}`;
 
@@ -254,12 +291,15 @@ function cards() {
 
             var priceDiscount = document.createElement('p');
             priceDiscount.className = 'priceDiscount';
-            priceDiscount.innerHTML = `R$ ${(element.price_with_discount).toLocaleString('pt-br')}/mês`;
+            priceDiscount.innerHTML = `R$ ${(element.price_with_discount).toLocaleString('pt-br')} <span>/mês</span>`;
 
 
             var textEntreContato = document.createElement('p');
             textEntreContato.className = 'textEntreContato';
-            textEntreContato.innerHTML = 'Entre em contato com nosso atendimento para saber mais.';
+            textEntreContato.innerHTML = 'Entre em contato com nosso';
+            var textEntreContatoTwo = document.createElement('p');
+            textEntreContatoTwo.className = 'textEntreContatoTwo';
+            textEntreContatoTwo.innerHTML = 'atendimento para saber mais.';
 
 
             var divBtnsCard = document.createElement('div');
@@ -279,29 +319,43 @@ function cards() {
 
 
 
+
+
+
             sectionCard.appendChild(divCard);
             divCard.appendChild(divItems);
-            divItems.appendChild(imgCard);
-            divItems.appendChild(nameFacul);
-            divItems.appendChild(nameCourse);
+            divItems.appendChild(containerLogoFacul);
+            divItems.appendChild(containerNameCourse);
+            divItems.appendChild(horizontal);
+            divItems.appendChild(containerTipo);
+            divItems.appendChild(horizontalTwo);
+
+            divItems.appendChild(mensalidadePrice);
+
+            containerLogoFacul.appendChild(imgCard);
+
+
+            containerNameCourse.appendChild(nameFacul);
+            containerNameCourse.appendChild(nameCourse);
             starOuter.appendChild(starInner);
             starDiv.appendChild(spanRate);
             starDiv.appendChild(starOuter);
-            divItems.appendChild(starDiv);
-            divItems.appendChild(horizontal);
-            divItems.appendChild(presencialEad);
-            divItems.appendChild(inicioAula);
-            divItems.appendChild(horizontalTwo);
-            divItems.appendChild(mensalidade);
+            containerNameCourse.appendChild(starDiv);
+
+            containerTipo.appendChild(presencialEad);
+            containerTipo.appendChild(inicioAula);
+
+            mensalidadePrice.appendChild(mensalidade);
             if (element.enabled) {
-                divItems.appendChild(fullPrice);
-                divItems.appendChild(priceDiscount);
+                mensalidadePrice.appendChild(fullPrice);
+                mensalidadePrice.appendChild(priceDiscount);
             } else {
-                divItems.appendChild(textEntreContato);
+                mensalidadePrice.appendChild(textEntreContato);
+                mensalidadePrice.appendChild(textEntreContatoTwo);
             }
 
 
-            
+
 
 
 
@@ -311,31 +365,21 @@ function cards() {
 
             divItems.appendChild(divBtnsCard);
 
-            const ratings = spanRate.value;
-                
-            
-              
-              
-              // total number of stars
-              const starTotal = 5;
-              
-              for (const rating in ratings) {
-                const starPercentage = ratings[rating] / starTotal * 100;
-                const starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
-                document.querySelector(`.${rating} .stars-inner`).style.width = starPercentageRounded;
-              }
+
+
 
 
 
         }
 
     }
+
 }
 
 function removeBolsa() {
 
     bolsas.splice(this.name, 1);
-    
+
     cards();
 }
 

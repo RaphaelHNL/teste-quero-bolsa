@@ -1,0 +1,228 @@
+/*CARD*/
+
+.flex {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+    margin: 40px 0 300px 0;
+}
+
+.card {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    padding: .5rem;
+    -webkit-box-shadow: 0px 2px 5px -1px rgba(143, 143, 143, 1);
+    -moz-box-shadow: 0px 2px 5px -1px rgba(143, 143, 143, 1);
+    box-shadow: 0px 2px 5px -1px rgba(143, 143, 143, 1);
+}
+
+.itemsCard {
+    display: block;
+}
+
+.containerImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 110px;
+}
+
+.containerAddBolsa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.imgAddBolsa {
+    width: 25%;
+}
+
+.containerLogoFacul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.containerNameCourse {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.containerTipo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.containerMensalidade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.containerhr {
+    display: flex;
+    flex-direction: row;
+}
+
+.logoFacul {
+    width: 50%;
+}
+
+.nomeFacul {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.nomeCourseCard {
+    color: #007A8D;
+}
+
+.nomeFacul, .nomeCourseCard, .starDiv {
+    margin-bottom: 5px;
+    font-weight: 550;
+}
+
+.presencialEad {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.inicioAula {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.mensalidadeCurso {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.fullPrice {
+    margin-bottom: 4px;
+    text-decoration: line-through;
+    font-size: 13px;
+}
+
+.priceDiscount {
+    margin-bottom: 12px;
+    color: #0FA866;
+    font-weight: 550;
+    font-size: 16px;
+}
+
+.priceDiscount>span {
+    color: #1F2D30;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.textEntreContato {
+    margin-bottom: 8px;
+}
+
+.textEntreContatoTwo {
+    margin-bottom: 12px;
+}
+
+.hdeitado {
+    border: 1px solid #e8eaee;
+    height: auto;
+    width: 100%;
+    box-sizing: initial;
+    overflow: visible;
+    margin-right: 10px;
+}
+
+.btnsCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.btnExcluir {
+    background-color: white;
+    border: 1px solid #007A8D;
+    color: #007A8D;
+    padding: 7px 20px;
+    border-radius: 4px;
+    text-align: center;
+    margin-right: 7px;
+    font-size: 16px;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+.btnDispoIndispo:enabled {
+    background-color: #FDCB13;
+    border: 1px solid #FDCB13;
+    color: #1F2D30;
+    padding: 7px 20px;
+    border-radius: 4px;
+    text-align: center;
+    margin-right: 7px;
+    font-size: 16px;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+.btnDispoIndispo:disabled {
+    background-color: #dedede;
+    border: 1px solid #dedede;
+    color: #999999;
+    padding: 7px 20px;
+    border-radius: 4px;
+    text-align: center;
+    margin-right: 7px;
+    font-size: 16px;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+.stars-outer {
+    display: inline-block;
+    position: relative;
+    font-family: FontAwesome;
+    margin-left: 5px;
+  }
+   
+  .stars-outer:before {
+    content: "\f006 \f006 \f006 \f006 \f006";
+    color: #FDCB13;
+  }
+   
+  .stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+  }
+   
+  .stars-inner:before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    color: #DE9E1F;
+  }
+

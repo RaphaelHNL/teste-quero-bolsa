@@ -1,0 +1,301 @@
+h2, ul, li, p, a, strong, label {
+    font-family: 'proxima-nova', Arial, sans-serif, Helvetica;
+}
+
+h2{
+    margin-bottom: 2px;
+}
+
+
+
+
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(31, 45, 48, 0.88);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+
+
+.modal-container.mostrar {
+    display: flex;
+}
+
+.modal {
+    background: white;
+    width: 50vw;
+    
+    min-width: 300px;
+    padding: 0 15px 20px 15px;
+    border: 10px;
+    box-shadow: 0 0 0 10px white;
+    position: relative;
+    
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.mostrar .modal {
+    animation: modal .3s;
+}
+
+.fechar {
+    position: absolute;
+    font-size: 1.2em;
+    top: -38px;
+    right: -45px;
+    width: 50px;
+    height: 50px;
+    
+    border: none;
+    background: transparent;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    
+}
+
+.filtreAdd{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.selecione{
+    margin: 25px 0 15px 0;
+}
+
+.labelModal{
+    font-weight: 550;
+    font-size: 15px;
+    
+}
+.estudarPagar{
+    padding-top: 10px;
+    display: flex;
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.eadPresencial{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.quantoPagar{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+ .resultadoOrdena, .selecione {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.comoQuerEstudar{
+    font-weight: 550;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.ateQtPagar{
+    font-weight: 550;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+#valBox{
+    margin-bottom: 10px;
+}
+.seleCidade {
+    width: 50%;
+}
+
+.seleCurso {
+    width: 50%;
+}
+
+.selectCity{
+    width: 90%;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid #c7c7c7;
+}
+
+.selectCourse {
+    width: 100%;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid #c7c7c7;
+}
+
+.presencialCheck{
+    margin-left: 3px;
+    margin-right: 15px;
+}
+.eadCheck{
+    margin-left: 3px; 
+}
+
+.checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+
+    
+}
+
+.checkbox[type="checkbox"] {
+    border: 1px solid black;
+    width: 13px;
+    height: 13px;
+    outline: none;
+    
+}
+.checkbox[type="checkbox"]:checked {
+    background: white ;
+    background-color: #18ACC4 ;
+    border: 1px solid #18ACC4;
+   
+}
+
+
+
+
+.tabelaCurso{
+    height: 30vh;
+    overflow: auto;
+}
+#bolsasTable{
+    width: 100%;
+}
+
+.tdImg {
+    width: 10%;
+    padding: 20px;
+}
+.imgBolsa{
+    width: 100px;
+    height: 45px;
+    
+}
+
+.courseName {
+    color: #007A8D;
+    font-size: 13px;
+    font-weight: 550;
+    margin-bottom: 5px;
+}
+
+.courseLevel {
+    font-size: 11px;
+    color: #1F2D30;
+    
+}
+
+.discount {
+    color: #0FA866;
+    margin-bottom: 5px;
+    font-weight: 550;
+    text-align: end;
+}
+
+.discount > span{
+    color: #1F2D30;
+    font-weight: 400;
+}
+
+.buttonModal {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border-bottom: 1px solid #e8eaee;
+    border-top: 1px solid #e8eaee;
+   
+  
+}
+
+
+
+
+
+
+.btnCancelar{
+    background-color: white;
+    border: 1px solid #007A8D;
+    color: #007A8D;
+    padding: 15px 20px;
+    border-radius: 4px;
+    text-align: center;
+    margin-right: 7px;
+    
+    font-size: 16px;
+    font-weight: 550;
+    
+    cursor: pointer;
+}
+
+.addBolsasBtn:enabled{
+    background-color: #FDCB13;
+    border: 1px solid #FDCB13;
+    color: #1F2D30;
+    padding: 15px 20px;
+    border-radius: 4px;
+    text-align: center;
+    margin-right: 7px;
+    
+    font-size: 16px;
+    font-weight: 550;
+    
+    cursor: pointer;
+}
+
+.addBolsasBtn:disabled{
+    background-color: #dedede;
+    border: 1px solid #dedede;
+    color: #999999;
+    padding: 15px 20px;
+    border-radius: 4px;
+    text-align: center;
+    margin-right: 7px;
+    
+    font-size: 16px;
+    font-weight: 550;
+    
+    cursor: pointer;
+}

@@ -1,0 +1,60 @@
+/*CONTATO*/
+
+.contato {
+    background-color: #007A8D;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.footerItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 1200px;
+    position: relative;
+    padding: 10px;
+    font-weight: 550;
+}
+
+.linkContato {
+    align-items: center;
+    color: #ffffff;
+    display: flex;
+    padding: 8px;
+}
+
+.iconFooter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: bottom;
+    font-size: 35px;
+}
+
+.infoIcon {
+    width: 35px;
+}
+
+.textContato {
+    margin: 0 0 0 8px;
+}
+
+.colorTextContato {
+    display: block;
+    color: #ffffff;
+}
+
+.contatoItem {
+    display: flex;
+    flex-direction: row;
+}
+
+.msgRodape {
+    background-color: #18ACC4;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    padding: 50px;
+}

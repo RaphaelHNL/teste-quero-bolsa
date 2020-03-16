@@ -1,0 +1,77 @@
+/*corpo da página*/
+
+.corpoPagina {
+    display: flex;
+    justify-content: center;
+    background-color: #FBFBFB;
+    height: 100%;
+}
+
+.containerPagina {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    position: relative;
+    padding: '10px';
+}
+
+.itemHome {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+.itemHome li {
+    padding: 10px 10px 10px 0px;
+}
+
+.homeConta {
+    color: #18ACC4;
+    font-size: 13px;
+    font-weight: 550;
+}
+
+.bolsaColor {
+    color: #1F2D30;
+    font-size: 13px;
+    font-weight: 550;
+}
+
+.itemHome li+li:before {
+    padding: 2px;
+    color: black;
+    content: "/\00a0";
+}
+
+.tituloBolsa {
+    padding: 0 0 25px 0px;
+    color: #1F2D30;
+}
+
+.botaoSemestre {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.botao {
+    background-color: white;
+    border: 1px solid #007A8D;
+    color: #007A8D;
+    padding: 7px 32px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.btnSelected {
+    background: #007A8D;
+    color: white;
+    border: 1px solid #007A8D;
+}
+
+.btnRadius {
+    border-radius: 5px 0 0 5px;
+}
+
+.btnFirstSemestre {
+    border-radius: 0 5px 5px 0;
+}

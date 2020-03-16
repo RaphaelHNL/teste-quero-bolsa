@@ -1,0 +1,32 @@
+/*Menu Navegação*/
+
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: #18ACC4;
+    height: 40px;
+}
+
+.containerMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    position: relative;
+    padding: '10px';
+}
+
+.itemMenu {
+    display: flex;
+    flex-direction: row;
+}
+
+.itemMenu li a {
+    color: #ffffff;
+    padding: 11px 12px 11px 12px;
+    font-weight: 700;
+}
+
+.bolsaMenu {
+    background-color: #007A8D;
+}

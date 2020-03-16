@@ -1,0 +1,157 @@
+/*GERAL*/
+
+body, ul, li, p, a, strong {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-family: 'proxima-nova', Arial, sans-serif, Helvetica;
+}
+
+h1{
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*CABEÇALHO*/
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #FBFBFB;
+    height: 80px;
+    margin-bottom: 0.5px;
+    -webkit-box-shadow: 0px -2px 183px 10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px -2px 183px 10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px -2px 183px 10px rgba(0, 0, 0, 0.75);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    position: relative;
+    padding: 10px;
+    font-weight: 700;
+}
+
+.itemCabecalho {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-self: stretch;
+}
+
+.informacao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.infoCircle {
+    
+    height: 26px;
+    margin-right: 5px;
+}
+
+.comoFunciona {
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    color: #007A8D;
+    text-decoration: none;
+}
+
+.hreto {
+    align-self: stretch;
+    border: 1px solid #e8eaee;
+    height: auto;
+    width: auto;
+    box-sizing: initial;
+    overflow: visible;
+    margin-right: 10px;
+}
+
+.cabecaConteudo {
+    align-self: center;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.contatoWhats {
+    color: #007A8D;
+    text-decoration: none;
+    margin: 0 0 0 8px;
+}
+
+.linkWhats {
+    align-items: center;
+    color: #0FA866;
+    display: flex;
+    padding: 8px;
+}
+
+.whatsNumberColor {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.tellContato {
+    max-width: 120px;
+}
+
+.envieMsg {
+    color: #007A8D;
+    font-size: 10px;
+}
+
+.logoQueroBolsa {
+    width: 40%;
+}
+
+.itemLogin {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.nomeUser {
+    text-decoration: none;
+    color: #007A8D;
+    margin-right: 5px;
+}
+
+.userIcon {
+    color: #007A8D;
+}
+
+.iconSvg {
+    font-size: 26px;
+}
+
+.msgLigue {
+    font-size: 13px;
+}
+
+.whatsappHeader {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: bottom;
+    
+}
+
+
+
+
+
