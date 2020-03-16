@@ -221,7 +221,7 @@ function cards() {
 
             const starPercentage = (rating / starTotal) * 100;
             const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
-            
+
 
             var divCard = document.createElement('div');
             divCard.className = 'card';
@@ -421,22 +421,47 @@ function limpaFiltro() {
 var sort = true;
 
 function ordenarNome() {
-    rows.sort(function (a, b) {
-        if (sort && a.university.name > b.university.name) {
-            return 1;
-        }
-        if (sort && a.university.name < b.university.name) {
-            return -1;
-        }
-        if (!sort && b.university.name < a.university.name) {
-            return 1;
-        }
-        if (!sort && b.university.name > a.university.name) {
-            return -1;
-        }
-        // a must be equal to b
-        sort = !sort;
-        return 0;
-    });
+    // rows.sort(function (a, b) {
+    //     if (sort && a.university.name < b.university.name) {
+    //         return -1;
+    //     }
+    //     if (sort && a.university.name > b.university.name) {
+    //         return 1;
+    //     }
+    //     if (!sort && b.university.name > a.university.name) {
+    //         return -1;
+    //     }
+    //     if (!sort && b.university.name < a.university.name) {
+    //         return 1;
+    //     }
+    //     // a must be equal to b
+    //     sort = !sort;
+    //     return 0;
+    // });
+    if (sort) {
+        rows.sort((a, b) => {
+
+            if (a.university.name < b.university.name) {
+                return -1;
+            }
+            if (a.university.name > b.university.name) {
+                return 1;
+            }
+            sort = !sort;
+            return 0;
+        });
+    } else {
+        rows.sort((a, b) => {
+
+            if (a.university.name > b.university.name) {
+                return -1;
+            }
+            if (a.university.name < b.university.name) {
+                return 1;
+            }
+            sort = !sort;
+            return 0;
+        });
+    }
     insertRowsTable();
 }

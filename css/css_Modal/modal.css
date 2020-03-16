@@ -118,6 +118,18 @@ h2{
     flex-wrap: wrap;
 }
 
+.resultadoOrdena{
+    margin-bottom: 10px;
+}
+
+.resultadoOrdena > p{
+    font-weight: 550;
+}
+
+.resultadoOrdena > p > span{
+    color: #18ACC4;
+}
+
 .comoQuerEstudar{
     font-weight: 550;
     font-size: 15px;
