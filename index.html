@@ -89,42 +89,20 @@
             </div>
 
             <div class="botaoSemestre">
-                <button class="botao btnRadius">Todos os semestres</button>
-                <button class="botao">2º semestre de 2019</button>
-                <button class="botao btnFirstSemestre">1º semestre de 2020</button>
+                <button id="allSemestre" class="botao btnRadius" onclick="chooseSemestre('allSemestre')">Todos os semestres</button>
+                <button id="secondSemestre" class="botao" onclick="chooseSemestre('secondSemestre')">2º semestre de 2019</button>
+                <button id="firstSemestre" class="botao btnFirstSemestre" onclick="chooseSemestre('firstSemestre')">1º semestre de 2020</button>
             </div>
 
 
-            <section class="flex">
+            <section id="sectionCards" class="flex">
                 <div class="card">
                     <div class="itemsCard">
-                        <img class="imgAddBolsa adiocionaBolsa" src="img/icons/mais.svg" alt="">
+                        <img class="imgAddBolsa btnOpenModal" src="img/icons/mais.svg" alt="">
                         <h4>Adicionar bolsa</h4>
                         <p>Clique para adicionar bolsas de cursos do seu interesse</p>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="itemsCard">
-                        <img class="imgAddBolsa adiocionaBolsa" src="img/icons/mais.svg" alt="">
-                        <h4>Adicionar bolsa</h4>
-                        <p>Clique para adicionar bolsas de cursos do seu interesse</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="itemsCard">
-                        <img class="imgAddBolsa adiocionaBolsa" src="img/icons/mais.svg" alt="">
-                        <h4>Adicionar bolsa</h4>
-                        <p>Clique para adicionar bolsas de cursos do seu interesse</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="itemsCard">
-                        <img class="imgAddBolsa adiocionaBolsa" src="img/icons/mais.svg" alt="">
-                        <h4>Adicionar bolsa</h4>
-                        <p>Clique para adicionar bolsas de cursos do seu interesse</p>
-                    </div>
-                </div>
-
             </section>
 
         </section>
@@ -209,21 +187,15 @@
                 <div class="seleCidade">
                     <label for="cars">SELECIONE SUA CIDADE</label>
 
-                    <select id="cars" name="carlist" form="carform" class="select">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="opel">Opel</option>
-                        <option value="audi">Audi</option>
+                    <select id="cities" name="citiesList" form="citiesForm" class="select" onchange="insertRowsTable()">
+                        <option value="" selected>Selecione uma cidade</option>
                     </select>
                 </div>
 
                 <div class="seleCurso">
                     <label for="cars">SELECIONE O CURSO DE SUA PREFERÊNCIA</label>
-                    <select id="cars" name="carlist" form="carform" class="select">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="opel">Opel</option>
-                        <option value="audi">Audi</option>
+                    <select id="courses" name="coursesList" form="coursesForm" class="select" onchange="insertRowsTable()">
+                        <option value="" selected>Selecione um curso</option>
                     </select>
                 </div>
 
@@ -233,20 +205,19 @@
                 <div>
                     <p>COMO VOCÊ QUER ESTUDAR?</p>
                     <div class="presencialOuDistancia">
-                        <input type="checkbox" id="presencial" name="presencial" checked>
+                        <input type="checkbox" id="presencial" name="presencial" checked oninput="insertRowsTable()">
                         <label for="presencial">Presencial</label>
 
-
-
-                        <input type="checkbox" id="distancia" name="distancia" checked>
+                        <input type="checkbox" id="distancia" name="distancia" checked onchange="insertRowsTable()">
                         <label for="distancia">A distância</label>
                     </div>
                 </div>
 
                 <div class="quantoPagar">
                     <p>ATÉ QUANTO PODE PAGAR?</p>
-                    <p>R$:10.000</p>
-                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                    <p id="valBox"></p>
+                    <input value="10000" type="range" min="100" max="10000" step="100" oninput="showVal(this.value)"
+                        onchange="insertRowsTable()">
 
                 </div>
             </div>
@@ -254,13 +225,14 @@
             <div>
                 <div class="resultadoOrdena">
                     <p>Resultado:</p>
-                    <p>Ordenar por Nome da Faculdade</p>
+                    <p onclick="ordenarNome()">Ordenar por Nome da Faculdade</p>
                 </div>
 
                 <div class="tabelaCurso">
-                    <table>
+                    <table id="bolsasTable">
                         <tbody>
-                            <tr>
+                            <!-- 
+                           <tr>
                                 <td><input type="checkbox"></td>
                                 <td><img class="tamanhoTeste" src="img/anhanguera.png"></td>
                                 <td>
@@ -271,20 +243,7 @@
                                     <span>Bolsa de 50%</span>
                                     <span>R$ 374/mês</span>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox"></td>
-                                <td><img class="tamanhoTeste" src="img/anhanguera.png"></td>
-                                <td>
-                                    <span>Administração</span>
-                                    <span>Bacharelado</span>
-                                </td>
-                                <td>
-                                    <span>Bolsa de 50%</span>
-                                    <span>R$ 374/mês</span>
-                                </td>
-                            </tr>
-
+                            </tr>  -->
 
 
                         </tbody>
@@ -293,8 +252,8 @@
             </div>
 
             <div class="buttonModal">
-                <button>Cancelar</button>
-                <button>Adicionar Bolsa(s)</button>
+                <button onclick="limpaFiltro()">Cancelar</button>
+                <button id="btnAddBolsa" onclick="adicionaBolsa()">Adicionar Bolsa(s)</button>
             </div>
 
 
@@ -302,9 +261,9 @@
     </div>
 
     <script src="https://kit.fontawesome.com/77b71911bb.js" crossorigin="anonymous"></script>
-    <script src="js/modal.js"></script>
-    <script type="text/javascript" src="js/dados/db.json"></script>
     <script type="text/javascript" src="js/dados_api.js"></script>
+    <script src="js/modal.js"></script>
+
 </body>
 
 </html>
