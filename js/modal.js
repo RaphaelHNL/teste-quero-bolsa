@@ -439,22 +439,24 @@ function ordenarNome() {
     //     return 0;
     // });
     if (sort) {
-        rows.sort((a, b) => {
-
-            if (a.university.name < b.university.name) {
-                return -1;
-            }
-            if (a.university.name > b.university.name) {
-                return 1;
-            }
-            
-            sort = !sort;
-            
-            return 0;
-            
-        });
         document.getElementsByClassName('setaCimaBaixo').src = "img/icons/seta-para-baixo.svg";
+        rows.sort((a, b) => {
+
+            if (a.university.name < b.university.name) {
+                return -1;
+            }
+            if (a.university.name > b.university.name) {
+                return 1;
+            }
+
+            sort = !sort;
+
+            return 0;
+
+        });
+
     } else {
+        document.getElementsByClassName('setaCimaBaixo').src = "img/icons/seta-para-cima.svg";
         rows.sort((a, b) => {
 
             if (a.university.name > b.university.name) {
@@ -463,14 +465,14 @@ function ordenarNome() {
             if (a.university.name < b.university.name) {
                 return 1;
             }
-            
+
             sort = !sort;
-            
+
             return 0;
-            
+
 
         });
-        document.getElementsByClassName('setaCimaBaixo').src = "img/icons/seta-para-cima.svg";
+
     }
     insertRowsTable();
 }
