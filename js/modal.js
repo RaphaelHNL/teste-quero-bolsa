@@ -447,12 +447,13 @@ function ordenarNome() {
             if (a.university.name > b.university.name) {
                 return 1;
             }
-            document.getElementsByClassName('setaCimaBaixo').src = "img/icons/seta-para-baixo.svg";
+            
             sort = !sort;
             
             return 0;
             
         });
+        document.getElementsByClassName('setaCimaBaixo').src = "img/icons/seta-para-baixo.svg";
     } else {
         rows.sort((a, b) => {
 
@@ -462,13 +463,14 @@ function ordenarNome() {
             if (a.university.name < b.university.name) {
                 return 1;
             }
-            document.getElementsByClassName('setaCimaBaixo').src = "img/icons/seta-para-cima.svg";
+            
             sort = !sort;
             
             return 0;
             
 
         });
+        document.getElementsByClassName('setaCimaBaixo').src = "img/icons/seta-para-cima.svg";
     }
     insertRowsTable();
 }
