@@ -448,6 +448,7 @@ function ordenarNome() {
                 return 1;
             }
             sort = !sort;
+            document.getElementsByClassName('setaCimaBaixo').src = 'img/icons/seta-para-baixo.svg'
             return 0;
         });
     } else {
@@ -460,7 +461,9 @@ function ordenarNome() {
                 return 1;
             }
             sort = !sort;
+            document.getElementsByClassName('setaCimaBaixo').src = 'img/icons/seta-para-cima.svg'
             return 0;
+
         });
     }
     insertRowsTable();

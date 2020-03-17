@@ -129,6 +129,9 @@ h2{
 .resultadoOrdena > p > span{
     color: #18ACC4;
 }
+.resultadoOrdena > p > img{
+    width: 10px;
+}
 
 .comoQuerEstudar{
     font-weight: 550;
