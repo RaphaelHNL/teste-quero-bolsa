@@ -361,15 +361,7 @@ function cards() {
 
             divBtnsCard.appendChild(btnExcluir);
             divBtnsCard.appendChild(btnDispoIndispo);
-
-
             divItems.appendChild(divBtnsCard);
-
-
-
-
-
-
         }
 
     }
